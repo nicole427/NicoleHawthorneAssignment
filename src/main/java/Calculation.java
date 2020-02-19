@@ -11,6 +11,7 @@ public class Calculation {
             execution.execute();
             System.out.println("Result is = " + execution.getResults());
         }
+
     }
 
     public static CalculationBackEnd create(double leftVal, double rightVal, char codes ){
@@ -18,6 +19,7 @@ public class Calculation {
         execution.setLeftVal(leftVal);
         execution.setRightVal(rightVal);
         execution.setCodes(codes);
+        execution.loggingValues(leftVal,rightVal,codes,execution.getResults());
         return execution;
     }
 }

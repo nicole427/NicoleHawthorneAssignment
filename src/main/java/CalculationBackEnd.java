@@ -4,6 +4,7 @@ public class CalculationBackEnd {
     private double rightVal;
     private char codes;
     private double results;
+    private String log;
     //implementing accessor and mutator
     public double getLeftVal(){
         return leftVal ;
@@ -28,6 +29,12 @@ public class CalculationBackEnd {
     }
     public void setResults(double results){
         this.results = results;
+    }
+
+    //Creates a log string to save all values used
+    public void loggingValues (double leftVal, double rightVale, char code, double result){
+        log = leftVal +" "+code+" "+rightVale+" ="+ result;
+
     }
 
     public void execute(){
